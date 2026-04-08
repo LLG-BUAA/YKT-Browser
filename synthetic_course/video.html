@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>测试视频页</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif;
+      background: linear-gradient(135deg, #eef4fb, #dfe8f6);
+      color: #162235;
+    }
+    .shell {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 28px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid #d5dfec;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(33, 58, 93, 0.08);
+    }
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .btn-next {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 112px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: #2c5cc8;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 700;
+    }
+    .player-box {
+      padding: 20px;
+      border-radius: 18px;
+      background: #f6f9fc;
+      border: 1px solid #dbe4f0;
+    }
+    video {
+      width: 100%;
+      height: 280px;
+      background: #14253a;
+      border-radius: 16px;
+    }
+    .meta {
+      margin-top: 14px;
+      color: #5a6f87;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="header-bar">
+      <div>
+        <div>发表评论</div>
+        <div class="meta">用于测试视频保活、回播判定与自动跳转。</div>
+      </div>
+      <span class="btn-next ml20 pointer" id="next-unit">下一单元</span>
+    </div>
+    <div class="player-box">
+      <video id="player" muted playsinline></video>
+      <div class="meta" id="video-meta">synthetic video state</div>
+    </div>
+  </div>
+
+  <script>
+    const player = document.getElementById("player");
+    const meta = document.getElementById("video-meta");
+    const state = {
+      currentTime: 111,
+      duration: 120,
+      paused: false,
+      ended: false
+    };
+
+    const defineMediaProperty = (name, getter, setter) => {
+      Object.defineProperty(player, name, {
+        configurable: true,
+        get: getter,
+        set: setter
+      });
+    };
+
+    defineMediaProperty("currentTime", () => state.currentTime, (value) => {
+      state.currentTime = Number(value) || 0;
+      state.ended = state.currentTime >= state.duration;
+    });
+    defineMediaProperty("duration", () => state.duration);
+    defineMediaProperty("paused", () => state.paused);
+    defineMediaProperty("ended", () => state.ended);
+    player.play = () => {
+      state.paused = false;
+      return Promise.resolve();
+    };
+
+    const tick = () => {
+      meta.textContent = `current=${state.currentTime.toFixed(1)}s duration=${state.duration}s paused=${state.paused} ended=${state.ended}`;
+    };
+
+    tick();
+    setTimeout(() => {
+      state.currentTime = 118;
+      tick();
+    }, 1500);
+    setTimeout(() => {
+      state.currentTime = 2;
+      state.ended = false;
+      tick();
+    }, 3200);
+
+    document.getElementById("next-unit").addEventListener("click", () => {
+      window.location.href = "./exercise.html";
+    });
+  </script>
+</body>
+</html>

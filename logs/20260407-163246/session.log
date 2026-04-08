@@ -1,0 +1,14 @@
+[2026-04-07 16:32:46] [INFO] [SYSTEM/SESSION_START] 自动化会话已启动 | 会话目录: F:\YKT-Browser\logs\20260407-163246
+[2026-04-07 16:32:49] [INFO] [SYSTEM/BROWSER_LAUNCH] 正在启动浏览器。 | 浏览器: C:\Program Files\Google\Chrome\Application\chrome.exe | 用户数据目录: F:\YKT-Browser\browser-profile
+[2026-04-07 16:32:53] [INFO] [NAVIGATION/PAGE_OPENED] 目标页面已打开 | https://buaa.yuketang.cn/pro/lms/CUJttg2ZDc3/31025069/video/79236580
+[2026-04-07 16:32:53] [INFO] [SYSTEM/LOGIN_HINT] 如果首次运行跳到登录页，请直接在浏览器中完成登录。 | 登录状态会自动保存在用户数据目录中，后续会复用。
+[2026-04-07 16:32:53] [INFO] [PAGE/PAGE_CLASSIFIED] 页面类型变化: unknown | 暂未识别出视频页或习题页
+[2026-04-07 16:32:53] [INFO] [PAGE/PAGE_UNKNOWN] 页面还没有出现可识别的关键信息。 | 如果长时间停留在这里，请检查是否有弹窗、验证码或网络加载问题。
+[2026-04-07 16:32:55] [INFO] [PAGE/PAGE_CLASSIFIED] 识别到页面类型: video | 检测到“发表评论”或 video 元素 | https://buaa.yuketang.cn/pro/lms/CUJttg2ZDc3/31025069/video/79236580
+[2026-04-07 16:32:55] [SUCCESS] [VIDEO/KEEPALIVE_INJECTED] 已向视频页注入保活脚本。 | 注入结果: started
+[2026-04-07 16:32:55] [INFO] [VIDEO/VIDEO_ELEMENT_WAITING] 已识别为视频页，但暂时还没拿到 video 元素。
+[2026-04-07 16:33:06] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=254.3s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:33:16] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=264.5s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:33:26] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=274.6s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:33:30] [INFO] [SYSTEM/STOP_REQUESTED] 收到停止请求，自动化已结束。
+[2026-04-07 16:33:30] [INFO] [SYSTEM/SESSION_FINISHED] 自动化会话已结束。 | 日志目录: F:\YKT-Browser\logs\20260407-163246

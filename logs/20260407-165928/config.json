@@ -1,0 +1,18 @@
+{
+  "url": "https://buaa.yuketang.cn/pro/lms/CUJttg2ZDc3/31025069/video/79236580",
+  "browser_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "user_data_dir": "F:\\YKT-Browser\\browser-profile",
+  "logs_dir": "F:\\YKT-Browser\\logs",
+  "poll_seconds": 1.0,
+  "video_end_wait_seconds": 10,
+  "exercise_wait_seconds": 10,
+  "page_load_timeout_ms": 60000,
+  "next_retry_seconds": 5,
+  "status_log_interval_seconds": 5,
+  "headless": false,
+  "auto_return_to_target_after_login": true,
+  "infinite_runtime": false,
+  "max_runtime_seconds": 12,
+  "test_seek_to_end_after_seconds": 0,
+  "test_force_ended_after_seconds": 0
+}

@@ -1,0 +1,147 @@
+[2026-04-07 16:33:54] [INFO] [SYSTEM/SESSION_START] 自动化会话已启动 | 会话目录: F:\YKT-Browser\logs\20260407-163354
+[2026-04-07 16:33:54] [INFO] [SYSTEM/BROWSER_LAUNCH] 正在启动浏览器。 | 浏览器: C:\Program Files\Google\Chrome\Application\chrome.exe | 用户数据目录: F:\YKT-Browser\browser-profile
+[2026-04-07 16:33:55] [INFO] [NAVIGATION/PAGE_OPENED] 目标页面已打开 | https://buaa.yuketang.cn/pro/lms/CUJttg2ZDc3/31025069/video/79236580
+[2026-04-07 16:33:55] [INFO] [SYSTEM/LOGIN_HINT] 如果首次运行跳到登录页，请直接在浏览器中完成登录。 | 登录状态会自动保存在用户数据目录中，后续会复用。
+[2026-04-07 16:33:55] [INFO] [PAGE/PAGE_CLASSIFIED] 页面类型变化: unknown | 暂未识别出视频页或习题页
+[2026-04-07 16:33:55] [INFO] [PAGE/PAGE_UNKNOWN] 页面还没有出现可识别的关键信息。 | 如果长时间停留在这里，请检查是否有弹窗、验证码或网络加载问题。
+[2026-04-07 16:33:56] [INFO] [PAGE/PAGE_CLASSIFIED] 识别到页面类型: video | 检测到“发表评论”或 video 元素 | https://buaa.yuketang.cn/pro/lms/CUJttg2ZDc3/31025069/video/79236580
+[2026-04-07 16:33:56] [SUCCESS] [VIDEO/KEEPALIVE_INJECTED] 已向视频页注入保活脚本。 | 注入结果: started
+[2026-04-07 16:33:56] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=277.0s, duration=617.0s, paused=True, ended=False
+[2026-04-07 16:34:06] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=608.8s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:34:16] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=1.8s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:34:26] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=12.0s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:34:37] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=22.2s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:34:47] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=32.3s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:34:57] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=42.5s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:35:07] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=52.6s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:35:17] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=62.8s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:35:27] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=73.0s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:35:38] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=83.1s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:35:48] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=93.3s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:35:58] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=103.5s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:36:08] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=113.6s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:36:18] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=123.8s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:36:28] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=134.0s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:36:39] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=144.1s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:36:49] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=154.3s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:36:59] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=164.5s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:37:09] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=174.7s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:37:19] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=184.8s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:37:29] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=195.0s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:37:40] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=205.1s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:37:50] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=215.3s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:38:00] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=225.5s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:38:10] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=235.6s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:38:20] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=245.8s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:38:30] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=256.0s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:38:41] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=266.2s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:38:51] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=276.4s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:39:01] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=286.6s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:39:11] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=296.7s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:39:21] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=306.9s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:39:31] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=317.1s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:39:42] [INFO] [VIDEO/VIDEO_PROGRESS] 视频播放状态已更新。 | current=327.3s, duration=617.0s, paused=False, ended=False
+[2026-04-07 16:39:44] [INFO] [PAGE/PAGE_CLASSIFIED] 页面类型变化: unknown | 暂未识别出视频页或习题页
+[2026-04-07 16:39:44] [INFO] [PAGE/PAGE_UNKNOWN] 页面还没有出现可识别的关键信息。 | 如果长时间停留在这里，请检查是否有弹窗、验证码或网络加载问题。
+[2026-04-07 16:39:46] [INFO] [PAGE/PAGE_CLASSIFIED] 识别到页面类型: exercise | 检测到“习题”或“提交” | https://buaa.yuketang.cn/pro/lms/CUJttg2ZDc3/31025069/video/79236582
+[2026-04-07 16:39:46] [INFO] [PAGE/EXERCISE_COUNTDOWN] 当前为非视频页，等待倒计时后自动跳转。 | 剩余 10 秒。
+[2026-04-07 16:39:47] [INFO] [PAGE/PAGE_CLASSIFIED] 识别到页面类型: video | 检测到“发表评论”或 video 元素 | https://buaa.yuketang.cn/pro/lms/CUJttg2ZDc3/31025069/video/79236582
+[2026-04-07 16:39:47] [SUCCESS] [VIDEO/KEEPALIVE_INJECTED] 已向视频页注入保活脚本。 | 注入结果: started
+[2026-04-07 16:39:52] [INFO] [PAGE/PAGE_CLASSIFIED] 页面类型变化: unknown | 暂未识别出视频页或习题页
+[2026-04-07 16:39:55] [INFO] [PAGE/PAGE_CLASSIFIED] 识别到页面类型: exercise | 检测到“习题”或“提交” | https://buaa.yuketang.cn/pro/lms/CUJttg2ZDc3/31025069/homework/79236591
+[2026-04-07 16:39:55] [INFO] [PAGE/EXERCISE_COUNTDOWN] 当前为非视频页，等待倒计时后自动跳转。 | 剩余 10 秒。
+[2026-04-07 16:39:56] [INFO] [PAGE/PAGE_CLASSIFIED] 识别到页面类型: exercise | 检测到“习题”或“提交” | https://buaa.yuketang.cn/pro/lms/CUJttg2ZDc3/31025069/homework/79236591
+[2026-04-07 16:39:56] [INFO] [PAGE/EXERCISE_COUNTDOWN] 当前为非视频页，等待倒计时后自动跳转。 | 剩余 10 秒。
+[2026-04-07 16:39:58] [INFO] [PAGE/PAGE_CLASSIFIED] 识别到页面类型: exercise | 检测到“习题”或“提交” | https://buaa.yuketang.cn/pro/lms/CUJttg2ZDc3/31025069/homework/79236591
+[2026-04-07 16:39:58] [INFO] [PAGE/EXERCISE_COUNTDOWN] 当前为非视频页，等待倒计时后自动跳转。 | 剩余 10 秒。
+[2026-04-07 16:40:02] [INFO] [PAGE/EXERCISE_COUNTDOWN] 当前为非视频页，等待倒计时后自动跳转。 | 剩余 5 秒。
+[2026-04-07 16:40:06] [INFO] [PAGE/EXERCISE_COUNTDOWN] 当前为非视频页，等待倒计时后自动跳转。 | 剩余 1 秒。
+[2026-04-07 16:40:08] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:12] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:12] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:16] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:16] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:20] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:20] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:24] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:24] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:28] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:28] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:32] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:32] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:36] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:36] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:40] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:40] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:44] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:44] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:48] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:48] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:52] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:52] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:40:56] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:40:56] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:00] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:00] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:04] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:04] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:08] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:08] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:12] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:12] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:16] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:16] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:20] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:20] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:24] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:24] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:28] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:28] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:32] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:32] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:36] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:36] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:40] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:40] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:44] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:44] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:49] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:49] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:53] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:53] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:41:57] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:41:57] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:01] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:01] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:05] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:05] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:09] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:09] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:13] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:13] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:17] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:17] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:21] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:21] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:25] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:25] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:29] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:29] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:33] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:33] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:37] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:37] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:41] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:41] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:45] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:45] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:49] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:49] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:53] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:53] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:42:57] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:42:57] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:43:01] [WARNING] [NAVIGATION/NEXT_CLICK_NO_NAVIGATION] 点击“下一单元”后页面没有发生切换。 | 这通常表示平台尚未认定当前内容已完成，或按钮虽然可见但还未真正放行。 | 先观察页面是否真正播放完成，必要时手动确认是否有额外校验或弹窗。
+[2026-04-07 16:43:01] [SUCCESS] [NAVIGATION/NEXT_CLICKED] 已在非视频页点击“下一单元”。 | 文本命中: 下一单元
+[2026-04-07 16:43:03] [INFO] [SYSTEM/STOP_REQUESTED] 收到停止请求，自动化已结束。
+[2026-04-07 16:43:03] [INFO] [SYSTEM/SESSION_FINISHED] 自动化会话已结束。 | 日志目录: F:\YKT-Browser\logs\20260407-163354
