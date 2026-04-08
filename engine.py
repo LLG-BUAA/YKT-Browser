@@ -223,10 +223,27 @@ class YuketangEngine:
         return False
 
     def _has_known_content(self) -> bool:
-        for text in ("发表评论", "习题", "提交", "下一单元"):
-            if self.page.query_selector(f"text={text}"):
+        # Check text-based markers
+        for text in ("发表评论", "习题", "提交"):
+            try:
+                if self.page.query_selector(f"text={text}"):
+                    return True
+            except Exception:
+                pass
+        # Check "下一单元" via CSS (it's inside span.btn-next)
+        try:
+            if self.page.query_selector("span.btn-next"):
                 return True
-        return False
+        except Exception:
+            pass
+        # JS fallback
+        try:
+            return self.page.evaluate("""
+                () => [...document.querySelectorAll('span')]
+                    .some(s => s.textContent.includes('下一单元'))
+            """)
+        except Exception:
+            return False
 
     # ── Page type detection ──────────────────────────────────────
 
@@ -382,33 +399,65 @@ class YuketangEngine:
 
     def _click_next(self):
         try:
+            # Try CSS selectors matching the actual DOM: span.btn-next
             next_btn = None
             for selector in (
-                "text=下一单元",
-                'button:has-text("下一单元")',
-                'a:has-text("下一单元")',
+                'span.btn-next',
+                'span.btn-next span',
+                ':text("下一单元")',
+                'text=下一单元',
                 'span:has-text("下一单元")',
             ):
-                next_btn = self.page.query_selector(selector)
-                if next_btn:
-                    break
-
-            if next_btn:
-                next_btn.click()
-                self._log("SUCCESS", "→ 已点击「下一单元」")
-                self.stats["units"] += 1
-                self._update_stats()
-
-                self._sleep(2)
                 try:
-                    self.page.wait_for_load_state("domcontentloaded", timeout=15000)
-                except PlaywrightTimeout:
-                    self._log("WARNING", "页面加载超时，继续执行...")
-                self._sleep(3)
-            else:
+                    next_btn = self.page.query_selector(selector)
+                    if next_btn:
+                        break
+                except Exception:
+                    continue
+
+            # JS fallback: find any element whose textContent contains "下一单元"
+            if not next_btn:
+                found = self.page.evaluate("""
+                    () => {
+                        const spans = document.querySelectorAll('span');
+                        for (const s of spans) {
+                            if (s.textContent.trim() === '下一单元' ||
+                                s.classList.contains('btn-next')) {
+                                s.click();
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+                """)
+                if found:
+                    self._log("SUCCESS", "→ 已点击「下一单元」(JS)")
+                    self.stats["units"] += 1
+                    self._update_stats()
+                    self._sleep(2)
+                    try:
+                        self.page.wait_for_load_state("domcontentloaded", timeout=15000)
+                    except PlaywrightTimeout:
+                        self._log("WARNING", "页面加载超时，继续执行...")
+                    self._sleep(3)
+                    return
+
                 self._log("WARNING", "未找到「下一单元」按钮")
                 self._log("INFO", "🎉 课程可能已全部完成！")
                 self._stop_event.set()
+                return
+
+            next_btn.click()
+            self._log("SUCCESS", "→ 已点击「下一单元」")
+            self.stats["units"] += 1
+            self._update_stats()
+
+            self._sleep(2)
+            try:
+                self.page.wait_for_load_state("domcontentloaded", timeout=15000)
+            except PlaywrightTimeout:
+                self._log("WARNING", "页面加载超时，继续执行...")
+            self._sleep(3)
 
         except Exception as e:
             self._log("ERROR", f"点击下一单元失败: {e}")
