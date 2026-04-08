@@ -8,7 +8,13 @@ import time
 import sys
 import customtkinter as ctk
 
-from engine import YuketangEngine, MsgType, EngineStatus
+from engine import (
+    CLICK_STRATEGY_OPTIONS,
+    DEFAULT_WAIT_FOR_CAPTCHA,
+    EngineStatus,
+    MsgType,
+    YuketangEngine,
+)
 
 
 class YuketangApp(ctk.CTk):
@@ -32,8 +38,8 @@ class YuketangApp(ctk.CTk):
 
         # Window config
         self.title("YKT Browser - 雨课堂自动播放助手")
-        self.geometry("780x720")
-        self.minsize(650, 580)
+        self.geometry("860x860")
+        self.minsize(760, 720)
         self.configure(fg_color=self.C_BG_DARK)
 
         # Theme
@@ -45,17 +51,24 @@ class YuketangApp(ctk.CTk):
         self.engine = None
         self.start_time = None
         self._is_paused = False
+        self.strategy_vars = {}
+        self.strategy_checkboxes = []
+        self.strategy_toggle_btn = None
+        self.advanced_strategy_frame = None
+        self.advanced_strategies_visible = False
+        self.wait_for_captcha_var = ctk.BooleanVar(value=DEFAULT_WAIT_FOR_CAPTCHA)
 
         # Build UI
         self._build_header()
         self._build_url_section()
         self._build_controls()
+        self._build_strategy_section()
         self._build_status_section()
         self._build_log_section()
 
         # Grid weights
         self.grid_columnconfigure(0, weight=1)
-        self.grid_rowconfigure(4, weight=1)
+        self.grid_rowconfigure(6, weight=1)
 
         # Start polling
         self._poll_queue()
@@ -68,6 +81,7 @@ class YuketangApp(ctk.CTk):
         self._add_log("INFO", "YKT Browser v" + self.VERSION + " 就绪")
         self._add_log("INFO", "粘贴课程链接后点击「开始」启动自动播放")
         self._add_log("INFO", "首次使用需要在弹出的浏览器中登录雨课堂账号")
+        self._add_log("INFO", "可在“切换方案”里勾选要尝试的点击/跳转策略")
 
     # ── UI Construction ──────────────────────────────────────────
 
@@ -158,9 +172,154 @@ class YuketangApp(ctk.CTk):
         )
         self.stop_btn.pack(side="left", padx=8)
 
+    def _build_strategy_section(self):
+        card = ctk.CTkFrame(
+            self,
+            fg_color=self.C_CARD,
+            corner_radius=12,
+            border_width=1,
+            border_color=self.C_BORDER,
+        )
+        card.grid(row=3, column=0, sticky="ew", padx=24, pady=6)
+        card.grid_columnconfigure(0, weight=1)
+        card.grid_columnconfigure(1, weight=1)
+
+        ctk.CTkLabel(
+            card,
+            text="切换方案",
+            font=ctk.CTkFont(size=13, weight="bold"),
+            text_color=self.C_TEXT,
+        ).grid(row=0, column=0, sticky="w", padx=16, pady=(12, 2))
+
+        ctk.CTkLabel(
+            card,
+            text="默认只展示推荐方案；其他备用方案默认折叠，只有排查兼容性时再展开。",
+            font=ctk.CTkFont(size=11),
+            text_color=self.C_TEXT_DIM,
+        ).grid(row=1, column=0, columnspan=2, sticky="w", padx=16, pady=(0, 10))
+
+        primary_key, primary_label, primary_desc = CLICK_STRATEGY_OPTIONS[0]
+        primary_frame = ctk.CTkFrame(card, fg_color="transparent")
+        primary_frame.grid(row=2, column=0, columnspan=2, sticky="ew", padx=16, pady=4)
+        self._build_strategy_option(
+            primary_frame,
+            primary_key,
+            primary_label,
+            primary_desc,
+            default_value=True,
+        )
+
+        ctk.CTkLabel(
+            primary_frame,
+            text="推荐：这是当前默认方案，通过测试的方案：“第一次预热、第二次才真正切页”的页面行为。",
+            font=ctk.CTkFont(size=11),
+            text_color=self.C_TEXT_DIM,
+        ).pack(anchor="w", padx=(30, 0), pady=(4, 0))
+
+        self.strategy_toggle_btn = ctk.CTkButton(
+            card,
+            text="展开其他备用方案",
+            width=128,
+            height=28,
+            font=ctk.CTkFont(size=11),
+            fg_color="transparent",
+            hover_color="#252a3a",
+            border_width=1,
+            border_color=self.C_BORDER,
+            text_color=self.C_TEXT_DIM,
+            corner_radius=8,
+            command=self._toggle_advanced_strategies,
+        )
+        self.strategy_toggle_btn.grid(row=3, column=0, sticky="w", padx=16, pady=(4, 6))
+
+        self.advanced_strategy_frame = ctk.CTkFrame(card, fg_color="transparent")
+        self.advanced_strategy_frame.grid(row=4, column=0, columnspan=2, sticky="ew", padx=0, pady=0)
+        self.advanced_strategy_frame.grid_columnconfigure(0, weight=1)
+        self.advanced_strategy_frame.grid_columnconfigure(1, weight=1)
+        self.advanced_strategy_frame.grid_remove()
+
+        for index, (key, label, description) in enumerate(CLICK_STRATEGY_OPTIONS[1:]):
+            row = index // 2
+            column = index % 2
+            option_frame = ctk.CTkFrame(self.advanced_strategy_frame, fg_color="transparent")
+            option_frame.grid(row=row, column=column, sticky="ew", padx=16, pady=4)
+            self._build_strategy_option(
+                option_frame,
+                key,
+                label,
+                description,
+                default_value=False,
+            )
+
+        ctk.CTkLabel(
+            self.advanced_strategy_frame,
+            text="这些方案主要用于排查页面兼容性，默认都不会启用。",
+            font=ctk.CTkFont(size=11),
+            text_color=self.C_TEXT_DIM,
+        ).grid(row=(len(CLICK_STRATEGY_OPTIONS) // 2) + 1, column=0, columnspan=2, sticky="w", padx=16, pady=(2, 6))
+
+        captcha_row = 5
+        captcha_checkbox = ctk.CTkCheckBox(
+            card,
+            text="检测到验证码时等待人工处理",
+            variable=self.wait_for_captcha_var,
+            font=ctk.CTkFont(size=12, weight="bold"),
+            text_color=self.C_TEXT,
+            checkbox_width=18,
+            checkbox_height=18,
+            border_width=2,
+            corner_radius=4,
+        )
+        captcha_checkbox.grid(row=captcha_row, column=0, sticky="w", padx=16, pady=(8, 12))
+        self.strategy_checkboxes.append(captcha_checkbox)
+
+        ctk.CTkLabel(
+            card,
+            text="开启后，如果页面弹出腾讯验证码/风控层，程序会先等待你手动完成验证，再继续切换。",
+            font=ctk.CTkFont(size=11),
+            text_color=self.C_TEXT_DIM,
+        ).grid(row=captcha_row, column=1, sticky="w", padx=16, pady=(8, 12))
+
+    def _build_strategy_option(self, parent, key, label, description, default_value):
+        var = ctk.BooleanVar(value=default_value)
+        checkbox = ctk.CTkCheckBox(
+            parent,
+            text=label,
+            variable=var,
+            font=ctk.CTkFont(size=12, weight="bold"),
+            text_color=self.C_TEXT,
+            checkbox_width=18,
+            checkbox_height=18,
+            border_width=2,
+            corner_radius=4,
+        )
+        checkbox.pack(anchor="w")
+
+        ctk.CTkLabel(
+            parent,
+            text=description,
+            font=ctk.CTkFont(size=11),
+            text_color=self.C_TEXT_DIM,
+        ).pack(anchor="w", padx=(30, 0), pady=(2, 0))
+
+        self.strategy_vars[key] = var
+        self.strategy_checkboxes.append(checkbox)
+
+    def _toggle_advanced_strategies(self):
+        if self.advanced_strategy_frame is None or self.strategy_toggle_btn is None:
+            return
+
+        self.advanced_strategies_visible = not self.advanced_strategies_visible
+        if self.advanced_strategies_visible:
+            self.advanced_strategy_frame.grid()
+            self.strategy_toggle_btn.configure(text="收起其他备用方案")
+        else:
+            self.advanced_strategy_frame.grid_remove()
+            self.strategy_toggle_btn.configure(text="展开其他备用方案")
+
     def _build_status_section(self):
         card = ctk.CTkFrame(self, fg_color=self.C_CARD, corner_radius=12, border_width=1, border_color=self.C_BORDER)
-        card.grid(row=3, column=0, sticky="ew", padx=24, pady=6)
+        card.grid(row=4, column=0, sticky="ew", padx=24, pady=6)
         card.grid_columnconfigure(0, weight=1)
 
         # Row 1: status + timer
@@ -216,7 +375,7 @@ class YuketangApp(ctk.CTk):
     def _build_log_section(self):
         # Log header
         log_header = ctk.CTkFrame(self, fg_color="transparent")
-        log_header.grid(row=4, column=0, sticky="new", padx=24, pady=(6, 2))
+        log_header.grid(row=5, column=0, sticky="new", padx=24, pady=(6, 2))
 
         ctk.CTkLabel(
             log_header, text="📝  运行日志",
@@ -245,8 +404,8 @@ class YuketangApp(ctk.CTk):
             activate_scrollbars=True,
             wrap="word",
         )
-        self.log_text.grid(row=5, column=0, sticky="nsew", padx=24, pady=(0, 18))
-        self.grid_rowconfigure(5, weight=1)
+        self.log_text.grid(row=6, column=0, sticky="nsew", padx=24, pady=(0, 18))
+        self.grid_rowconfigure(6, weight=1)
 
         # Tag colors
         self.log_text.tag_config("ts", foreground="#475569")
@@ -271,6 +430,22 @@ class YuketangApp(ctk.CTk):
         except Exception:
             pass
 
+    def _collect_engine_options(self):
+        click_strategies = [
+            key for key, var in self.strategy_vars.items()
+            if var.get()
+        ]
+        return {
+            "click_strategies": click_strategies,
+            "wait_for_captcha": self.wait_for_captcha_var.get(),
+        }
+
+    def _set_strategy_controls_state(self, state):
+        for checkbox in self.strategy_checkboxes:
+            checkbox.configure(state=state)
+        if self.strategy_toggle_btn is not None:
+            self.strategy_toggle_btn.configure(state=state)
+
     def _on_start(self):
         url = self.url_entry.get().strip()
         if not url:
@@ -280,16 +455,34 @@ class YuketangApp(ctk.CTk):
             self._add_log("ERROR", "请输入有效的URL（以 http 开头）")
             return
 
+        options = self._collect_engine_options()
+        if not options["click_strategies"]:
+            self._add_log("ERROR", "请至少勾选一种切换方案")
+            return
+
+        strategy_labels = [
+            checkbox_label
+            for key, checkbox_label, _ in CLICK_STRATEGY_OPTIONS
+            if key in options["click_strategies"]
+        ]
+
         self.start_btn.configure(state="disabled")
         self.pause_btn.configure(state="normal")
         self.stop_btn.configure(state="normal")
         self.url_entry.configure(state="disabled")
+        self._set_strategy_controls_state("disabled")
         self._is_paused = False
         self.start_time = time.time()
         self.progress_bar.set(0)
         self.progress_label.configure(text="")
 
-        self.engine = YuketangEngine(self.msg_queue)
+        self._add_log("INFO", "本次启用方案: " + "、".join(strategy_labels))
+        self._add_log(
+            "INFO",
+            "验证码等待人工处理: " + ("开启" if options["wait_for_captcha"] else "关闭"),
+        )
+
+        self.engine = YuketangEngine(self.msg_queue, options=options)
         self.engine.start(url)
 
     def _on_pause(self):
@@ -320,6 +513,7 @@ class YuketangApp(ctk.CTk):
         self.pause_btn.configure(state="disabled", text="⏸  暂 停", fg_color="#374151")
         self.stop_btn.configure(state="disabled")
         self.url_entry.configure(state="normal")
+        self._set_strategy_controls_state("normal")
         self._is_paused = False
 
     # ── Log / Status updates ─────────────────────────────────────
@@ -364,6 +558,7 @@ class YuketangApp(ctk.CTk):
             "停止中":   self.C_WARNING,
             "空闲":     self.C_TEXT_DIM,
             "等待登录": self.C_WARNING,
+            "等待验证": self.C_WARNING,
         }
         color = color_map.get(status_text, self.C_TEXT_DIM)
         self.status_dot.configure(text_color=color)
